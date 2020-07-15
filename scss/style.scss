@@ -14,12 +14,25 @@ $color-danger: hsl(0, 94%, 66%);
 
 // margins
 $margin-right-20: 20px;
-// $margin-right-40: 20px;
-// $margin-right-60: 20px;
-// $margin-right-80: 20px;
+$margin-bottom-20: 20px;
+$margin-top-20: 20px;
+$margin-left-20: 20px;
+
+$padding-section: 80px 0;
 
 //paddings
 $padding-top-60: 60px;
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p{
+        width: 40%;
+        text-align: center;
+    }
+}
 
 //global styles
 
@@ -114,15 +127,39 @@ font-family: 'Rubik', sans-serif;
         }
     }
 
-    .sectio-two {
+    .section-two {
         padding-top: $padding-top-60;
-        .title{
+    }
+
+    .section-three {
+       padding: $padding-section;
+        
+        .cards-browsers {
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            p{
-                width: 40%;
+            margin-top: 40px;
+            
+            .card{
+                background-color: #ffffff;
+                box-shadow: 0px 4px 6px #ddd;
+                margin-right: 20px;
+                padding: 40px;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 50%;
+                    height: auto;
+                    margin-bottom: $margin-bottom-20;
+                }
+                p{
+                    margin: 10px 0;
+                }
+                a{
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -135,11 +172,12 @@ font-family: 'Rubik', sans-serif;
 	margin: 2rem;
 
 	.nav-tabs {
-		float: left;
+		justify-content: center;
+        display: flex;
 		width: 100%;
 		margin: 0;
 		list-style-type: none;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid rgb(151, 151, 151);
 
 		> li {
 			float: left;
@@ -150,7 +188,7 @@ font-family: 'Rubik', sans-serif;
 				margin-right: 2px;
 				line-height: 1.42857143;
 				padding: 10px;
-				border: 1px solid transparent;
+				text-decoration: none;
 				border-radius: 4px 4px 0 0;
 
 				&:hover {
@@ -164,31 +202,52 @@ font-family: 'Rubik', sans-serif;
 				> a:focus {
 					color: #555;
 					cursor: default;
-					background-color: #fff;
-					border: 1px solid #ddd;
-					border-bottom-color: transparent;
+					border-bottom: 5px solid $color-danger;
 				}
 			}
 		}
 	}
 
 	.tab-content {
-		float: left;
+		
 		width: 100%;
 
 		> .tab-pane {
-			display: none;
+            display: none;
 
 			&.active {
 				display: block;
 				padding: 2.5% 3.5%;
-				background-color: #efefef;
 			}
 		}
 
 		> .active {
 			display: block;
-		}
+        }
+        
+        .information{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            .image-tab::before{
+                content: "";
+                width: 540px;
+                transform: translate(-70px, 90px);
+                position: absolute;
+                height: 320px;
+                z-index: -1;
+                border-radius: 0 0 115px 0;
+                background: aquamarine;
+            }
+            .description{
+                h2{
+                    color: $color-black-title;
+                    font-size: 1.5rem;
+                }
+                p{
+                    margin: 30px 0;
+                }
+            }
+        }
 	}
 
 }
