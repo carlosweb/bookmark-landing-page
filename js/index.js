@@ -9,6 +9,7 @@
 // console.log(valorTotal)
 
 
+// tab script
 window.addEventListener("load", function() {
 	// store tabs variable
 	var myTabs = document.querySelectorAll("ul.nav-tabs > li");
@@ -32,3 +33,19 @@ window.addEventListener("load", function() {
 		myTabs[i].addEventListener("click", myTabClicks)
 	}
 });
+
+
+// Accordion Script
+
+const accordionBt = document.querySelectorAll('.accordion')
+const textTab = document.querySelectorAll('.panel')
+
+
+accordionBt.forEach((item) => {
+	item.addEventListener('click', () => {
+		textTab.classList.add('.active')
+	})
+})
+
+
+

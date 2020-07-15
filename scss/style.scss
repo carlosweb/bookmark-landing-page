@@ -162,8 +162,42 @@ font-family: 'Rubik', sans-serif;
                 }
             }
         }
-    }
+     }
   }
+
+  .section-four {
+    padding-top: $padding-top-60;
+
+        .accordion-panel{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            margin: $margin-top-20 auto;
+            .accordion{
+                border-top: 1px solid #ccc;
+                border-bottom: 0;
+                border-right: 0;
+                border-left: 0;
+                background: none;
+                outline: none;
+                padding: 15px 0;
+                cursor: pointer;
+            }
+
+            .panel{
+                height: 0;
+                margin: 20px 0;
+                visibility: hidden;
+                p{
+                    color: #555;
+                }
+                .active{
+                    visibility: visible;
+                    height: auto;
+                }
+            }
+        }
+    }
 }
 
 
