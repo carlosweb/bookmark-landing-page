@@ -187,14 +187,20 @@ font-family: 'Rubik', sans-serif;
             .panel{
                 height: 0;
                 margin: 20px 0;
-                visibility: hidden;
+                padding: 20px;
+                display: none;
+                transition: 500ms ease-in-out;
+                
                 p{
                     color: #555;
+                    text-align: justify;
                 }
-                .active{
-                    visibility: visible;
-                    height: auto;
-                }
+            }
+            .active{
+                display: block;
+                height: 200px;
+                background-color: #ccc;
+                transition: 500ms ease-in-out;
             }
         }
     }

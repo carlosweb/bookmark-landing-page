@@ -37,15 +37,20 @@ window.addEventListener("load", function() {
 
 // Accordion Script
 
-const accordionBt = document.querySelectorAll('.accordion')
-const textTab = document.querySelectorAll('.panel')
+const btAccord = document.querySelectorAll('.accordion-bt')
+const textPanel = document.querySelectorAll('.panel')
 
+function teste() {
+		
+		btAccord.forEach((item) => {
+			item.addEventListener('click', ()=>{
+				textPanel.classList.toggle('active')
+			})
+		})
+}
 
-accordionBt.forEach((item) => {
-	item.addEventListener('click', () => {
-		textTab.classList.add('.active')
-	})
-})
+teste()
+
 
 
 
