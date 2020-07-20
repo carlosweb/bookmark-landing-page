@@ -36,20 +36,20 @@ window.addEventListener("load", function() {
 
 
 // Accordion Script
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-const btAccord = document.querySelectorAll('.accordion-bt')
-const textPanel = document.querySelectorAll('.panel')
-
-function teste() {
-		
-		btAccord.forEach((item) => {
-			item.addEventListener('click', ()=>{
-				textPanel.classList.toggle('active')
-			})
-		})
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
 }
-
-teste()
 
 
 

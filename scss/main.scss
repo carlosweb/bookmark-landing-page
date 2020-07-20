@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+body {
+font-size: 18px;
+font-family: 'Rubik', sans-serif;
+
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    header {
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+          background: aquamarine;
+          justify-content: space-between;
+          padding: 0 20px;
+          align-items: center;
+        ul {
+          display: flex;
+          
+          li {
+            list-style: none;
+            margin-right: $margin-right-20;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+          }
+        }
+      }
+    }
+
+    // section one style
+    .section-one {
+        padding-top: $padding-top-60;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        .content-left{
+            padding: 70px 85px;
+                h1{
+                    color: $color-black-title;
+                    font-size: 3rem;
+                }
+                p{
+                    color: rgb(160, 160, 160);
+                    margin: 40px 0;
+                }
+        }
+        .content-right{
+            .image-right{
+                max-width: 100%;
+                height: auto;
+            }
+            
+        }
+        .content-right::after{
+            content: "";
+            width: 420px;
+            transform: translate(-370px, 140px);
+            position: absolute;
+            height: 320px;
+            z-index: -1;
+            border-radius: 0 0 0 115px;
+            background: aquamarine;
+        }
+    }
+
+    .section-two {
+        padding-top: $padding-top-60;
+    }
+
+    .section-three {
+       padding: $padding-section;
+        
+        .cards-browsers {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            
+            .card{
+                background-color: #ffffff;
+                box-shadow: 0px 4px 6px #ddd;
+                margin-right: 20px;
+                padding: 40px;
+                border-radius: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 50%;
+                    height: auto;
+                    margin-bottom: $margin-bottom-20;
+                }
+                p{
+                    margin: 10px 0;
+                }
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+     }
+  }
+
+  .section-four {
+    padding: $padding-section;
+
+        .accordion-panel{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            margin: $margin-top-20 auto;
+            .accordion {
+                background: none;
+                color: #444;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                transition: 0.4s;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              }
+              
+              .active, .accordion:hover {
+                // background-color: #ccc;
+              }
+              
+              .accordion:after {
+                content: '\002B';
+                font-size: 30px;
+                color: #777;
+                font-weight: bold;
+              }
+              
+              .active:after {
+                content: "\2212";
+              }
+              
+              .panel {
+                padding: 0 18px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+              }
+        }
+        
+    }
+    .section-five {
+        background-color: $color-primary;
+        padding: $padding-section;
+        .container{
+            footer{
+                .title-2{
+                    color: #f2f2f2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .contact-us{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: $margin-top-20;
+
+                }
+            }
+        }
+    }
+    
+}
+

@@ -1,0 +1,76 @@
+
+//global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p{
+          width: 40%;
+          text-align: center;
+      }
+  }
+  
+  // input
+  input[type="text"] {
+      padding: 15px 20px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1.2rem;
+      outline: #777;
+  }
+
+.btn{
+    background-color: rgb(212, 212, 212);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #444444;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+}
+
+button{
+    background-color: rgb(212, 212, 212);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #444444;
+    border:none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+}
+
+.btn-primary{
+    background-color: $color-primary;
+    color: #f2f2f2;
+    box-sizing: border-box;
+    transition: 100ms ease-in-out;
+    &:hover{
+        background-color: white;
+        border: 2px solid $color-primary;
+        box-sizing: border-box;
+        color: $color-primary;
+    }
+}
+
+.btn-default{
+    background-color: $color-default;
+    color: #383838;
+}
+
+.btn-danger{
+    background-color: $color-danger;
+    color: #f2f2f2;
+}
